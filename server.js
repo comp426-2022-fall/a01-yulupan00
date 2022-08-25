@@ -7,7 +7,7 @@ const fs = require('fs');
 const minimist = require('minimist')
 const args = minimist(process.argv.slice(2));
 // Use minimist to process one argument `--port=` on the command line after `node server.js`.
-const port = args.port || 3000;
+const port = args.port ? args.port : 3000;
 // Define a const `port` using the argument from the command line. 
 // Make this const default to port 3000 if there is no argument given for `--port`.
 
